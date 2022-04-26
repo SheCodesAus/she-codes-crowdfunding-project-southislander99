@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
         <Routes>
           <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
       </div>
