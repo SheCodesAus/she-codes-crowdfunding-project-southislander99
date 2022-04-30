@@ -1,6 +1,111 @@
+nav {
+  height: 50px;
+  text-align: center;
+  padding: 20px 0px;
+  background-color: lightgrey;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(36, 30, 18);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0px 10px 0px 0px;
+}
+
+h1 {
+  color: rgb(255, 66, 77);
+  font-family: Walsheim, sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1.25;
+  margin: 0px;
+}
+
+h2 {
+  color: rgb(36, 30, 18);
+  font-family: Walsheim, sans-serif;
+  margin: 0px 0px 15px 0px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.625rem;
+  line-height: 1.25;
+}
+
+#hero-banner-text p {
+  font-family: aktiv-grotesk, sans-serif;
+  margin: 1rem 0rem 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.button {
+  text-decoration: none;
+  background-color: rgb(255, 66, 77);
+  border-radius: 9999px;
+  display: inline-flex;
+  font-weight: 500;
+  padding: 0.78125rem 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+#hero-banner {
+  margin: 100px auto;
+  max-width: 72rem;
+  display: flex;
+}
+
+#hero-banner-text{
+  margin: 0px 15px 0px 15px;
+  align-items: center;
+}
+
+#hero-banner-image {
+  margin: 0px 0px 0px 15px;
+}
+
+.section-header {
+  margin: 30px 0px;
+}
+
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
   row-gap: 10px;
+  justify-content: center;
+  text-align:center
 }
+
+#project-list a {
+  text-decoration: none;
+  color: rgb(36, 30, 18);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0px 10px 0px 0px;
+}
+
+.view-more-cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.section-intro {
+  margin: 100px auto;
+  max-width: 55rem;
+}
+
+.section-intro p {
+  color: rgb(36, 30, 18);
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 1.125rem;
+  line-height: 2;
+  text-align: center;
+  font-weight: 400;
+}
+
+
+

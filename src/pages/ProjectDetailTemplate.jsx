@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function ProjectPage() {
+function ProjectDetailTemplate() {
   // State
   const [projectData, setProjectData] = useState();
 
@@ -44,4 +44,4 @@ function ProjectPage() {
   );
 }
 
-export default ProjectPage;
+export default ProjectDetailTemplate;
