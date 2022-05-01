@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import ProjectDetailTemplate from "./pages/ProjectDetailTemplate";
 import ProjectListingPage from "./pages/ProjectListingPage";
 import LoginPage from "./pages/LoginPage";
+import PledgePage from "./pages/PledgePage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Nav />
 
         <Routes>
+          <Route path="/pledge" element={<PledgePage />} />
           <Route path="/project" element={<ProjectListingPage />} />
           <Route path="/project/:id" element={<ProjectDetailTemplate />} />
           <Route path="/login" element={<LoginPage />} />
