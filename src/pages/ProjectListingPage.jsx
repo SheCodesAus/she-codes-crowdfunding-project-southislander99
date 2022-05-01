@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import RegisterCta from "../components/RegisterCta/RegisterCta";
-import ProjectFilters from "../components/ProjectFilters/ProjectFilters";
+import CategoryFilter from "../components/CategoryFilter/CategoryFilter";
 
 function ProjectListingPage() {
     const [projectList, setProjectList] = useState([]);
@@ -18,10 +18,10 @@ function ProjectListingPage() {
 
     return (
         <main>
-            <ProjectFilters />
             <div class="section-header">
                 <h2>Latest Fad Projects!</h2>
             </div>
+            <CategoryFilter />
             <div id="project-list">
                 {projectList.map((projectData, key) => {
                     return <ProjectCard key={key} projectData={projectData} />;

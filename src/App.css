@@ -76,7 +76,8 @@ h2 {
   column-gap: 10px;
   row-gap: 10px;
   justify-content: center;
-  text-align:center
+  text-align:center;
+  margin: 50px 0px;
 }
 
 #project-list a {
