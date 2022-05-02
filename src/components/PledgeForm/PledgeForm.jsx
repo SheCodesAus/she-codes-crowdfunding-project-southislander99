@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./PledgeForm.css";
 
 function PledgeForm() {
+
+  //declare states
     const [amount, setAmmount] = useState("");
     const [comment, setComment] = useState("");
     const [annonymous, setAnnonymous] = useState("");
@@ -10,6 +12,8 @@ function PledgeForm() {
     const [message, setMessage] = useState("");
 
     // const navigate = useNavigate();
+
+  //function to handle the submit action
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -44,6 +48,7 @@ function PledgeForm() {
         }
       };
 
+    //view of the app
     return (
         <div class="pledge-form">
             <form onSubmit={handleSubmit}>

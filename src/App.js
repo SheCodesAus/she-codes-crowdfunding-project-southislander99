@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Nav from "./components/Nav/Nav";
+import Navbar from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage";
 import ProjectDetailTemplate from "./pages/ProjectDetailTemplate";
@@ -12,8 +12,9 @@ import PledgePage from "./pages/PledgePage";
 function App() {
   return (
     <Router>
+      <Navbar />
       <div>
-        <Nav />
+        
 
         <Routes>
           <Route path="/pledge" element={<PledgePage />} />

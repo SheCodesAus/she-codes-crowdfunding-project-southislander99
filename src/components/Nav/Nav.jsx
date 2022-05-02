@@ -1,14 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+    Nav,
+    NavLogo,
+    NavLink,
+    Bars,
+    NavMenu,
+    NavBtn,
+    NavBtnLink,
+} from "./NavbarElements";
 
-function Nav() {
+const Navbar = () => {
     return(
-        <nav>
-            <Link to="/">Home</Link>
-            <Link to="/project">Projects</Link>
-            <Link to="/login">Login</Link>
-        </nav>
+        <Nav>
+            <NavLogo to="/">Logo</NavLogo>
+            <Bars />
+        
+            <NavMenu>
+                <NavLink to="/" activeStyle={{ color: 'black' }}>Home</NavLink>
+                <NavLink to="/project" activeStyle={{ color: 'black' }}>Projects</NavLink>
+                <NavLink to="/login" activeStyle={{ color: 'black' }}>Login</NavLink>
+                <NavBtn>
+                    <NavBtnLink to="/">Sign Up</NavBtnLink>
+                </NavBtn>
+            </NavMenu>
+        </Nav>
     );
 }
 
-export default Nav;
+export default Navbar;

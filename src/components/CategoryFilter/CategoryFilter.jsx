@@ -9,9 +9,9 @@ import "./CategoryFilter.css";
 //     { label: 'Active', value: 'Active'},
 // ];
 
-function CategoryFilter(categoryFilter) {
+function CategoryFilter() {
 
-    const [categoryData, setCategoryData] = useState();
+    const [categoryData, setCategoryData] = useState([]);
     
     // Actions & Helpers
     useEffect(() => {
@@ -22,7 +22,7 @@ function CategoryFilter(categoryFilter) {
         .then((data) => {
             setCategoryData(data);
         });
-    }, [categoryFilter]);
+    }, []);
 
     return (
         <div className="category-filter">
