@@ -8,6 +8,7 @@ import ProjectDetailTemplate from "./pages/ProjectDetailTemplate";
 import ProjectListingPage from "./pages/ProjectListingPage";
 import LoginPage from "./pages/LoginPage";
 import PledgePage from "./pages/PledgePage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         
 
         <Routes>
+          <Route path="/users/:id" element={<ProfilePage />} />
           <Route path="/pledge" element={<PledgePage />} />
           <Route path="/project" element={<ProjectListingPage />} />
           <Route path="/project/:id" element={<ProjectDetailTemplate />} />

@@ -57,7 +57,7 @@ h2 {
 }
 
 #hero-banner-text{
-  margin: 0px 15px 0px 15px;
+  margin: 50px 15px 0px 15px;
   align-items: center;
 }
 
@@ -66,7 +66,7 @@ h2 {
 }
 
 .section-header {
-  margin: 30px 0px;
+  margin: 50px 0px;
 }
 
 #project-list {
@@ -107,5 +107,52 @@ h2 {
   font-weight: 400;
 }
 
+section {
+  padding: 50px;
+  /* background-color: #F6F8DE; */
+}
+
+.grid--container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.hero--title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.hero--image {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px gray;
+}
+
+.hero--sidebar {
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px gray;
+}
+
+.hero--sidebar {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.hero--sidebar button {
+  background-color:#02a95c;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  color:white;
+}
 
 
