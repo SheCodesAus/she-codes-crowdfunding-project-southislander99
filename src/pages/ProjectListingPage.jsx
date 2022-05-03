@@ -18,7 +18,7 @@ function ProjectListingPage() {
 
     return (
         <main>
-            <div class="section-header">
+            <div className="section-header">
                 <h2>Latest Fad Projects!</h2>
             </div>
             <CategoryFilter />

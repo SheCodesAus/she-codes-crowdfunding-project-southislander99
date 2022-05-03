@@ -22,12 +22,12 @@ function HomePage() {
                 <div id="hero-banner-text">
                     <h1>Like and Fund Me</h1>
                     <p>Support your favourite social media influencers.<br />They need your likes and dollars.</p>
-                    <a href="/" class="button" >Support an influencer</a>
+                    <a href="/" className="button" >Support an influencer</a>
                 </div>
-                <img id="hero-banner-image" src="https://via.placeholder.com/600x350.jpg" />
+                <img id="hero-banner-image" width="600px" src="https://new-cdn.mamamia.com.au/mamamia-pwa.appspot.com/cms_images/variations/1200x800-317613485492.jpg" />
             </div>
 
-            <div class="section-header">
+            <div className="section-header">
                 <h2>Latest Fad Projects!</h2>
             </div>
             <div id="project-list">
@@ -35,10 +35,10 @@ function HomePage() {
                     return <ProjectCard key={key} projectData={projectData} />;
                 } )}
             </div>
-            <div class="view-more-cta">
+            <div className="view-more-cta">
                 <a href="/project" class="button" >View more awesome influencer lead projects!</a>
             </div>
-            <div class="section-intro">
+            <div className="section-intro">
                 <h2>What Is 'Like and Fund Me'?</h2>
                 <p>On Like and Fund Me, you can let your followers become active participants joining in on the latest social media influencer projects they love by offering them a way to fund, like and share your projects. You give them eraly access to content to show their support with a community led fan-base and insight into your creative process. In exchange, you get the freedom to do your best work, and still have time to post to the gram.</p>
             </div>

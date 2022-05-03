@@ -9,6 +9,7 @@ function PledgeForm() {
     const [comment, setComment] = useState("");
     const [annonymous, setAnnonymous] = useState("");
     const [projectid, setProjectid] = useState("");
+    const [supporterid, setSupporterid] = useState("");
     const [message, setMessage] = useState("");
 
     // const navigate = useNavigate();
@@ -30,6 +31,7 @@ function PledgeForm() {
                 comment: comment,
                 annonymous: annonymous,
                 projectid: projectid,
+                supporterid: supporterid,
             }),
           });
           let resJson = await res.json();
@@ -38,6 +40,7 @@ function PledgeForm() {
             setComment("");
             setAnnonymous("");
             setProjectid("");
+            setSupporterid("");
             setMessage("Pledge submitted successfully");
           } else {
             setMessage("Error - pledge not submitted");
@@ -50,7 +53,7 @@ function PledgeForm() {
 
     //view of the app
     return (
-        <div class="pledge-form">
+        <div className="pledge-form">
             <form onSubmit={handleSubmit}>
             <input
                 type="number"
@@ -76,10 +79,16 @@ function PledgeForm() {
                 placeholder="projectid"
                 onChange={(e) => setProjectid(e.target.value)}
             />
+            <input
+                type="number"
+                value={supporterid}
+                placeholder="supporterid"
+                onChange={(e) => setSupporterid(e.target.value)}
+            />
 
             <button type="submit">Pledge to project</button>
 
-            <div class="message">{message ? <p>{message}</p> : null}</div>
+            <div className="message">{message ? <p>{message}</p> : null}</div>
             </form>
         </div>
     );

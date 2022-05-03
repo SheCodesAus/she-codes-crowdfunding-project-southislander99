@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProjectOwner from "../components/ProjectOwner/ProjectOwner";
 import PledgeSupporter from "../components/PledgeSupporter/PledgeSupporter";
-import PledgeProgress from "../../components/PledgeProgress/PledgeProgress";
+import PledgeProgress from "../components/PledgeProgress/PledgeProgress";
 
 function ProjectDetailTemplate() {
   // State
@@ -41,14 +41,15 @@ function ProjectDetailTemplate() {
 
   // Normal State
   return (
-    <main className="grid--container">
-      <div class="project-header">
-        <h2 className="hero--title">{projectData.title}</h2>
+    <main>
+      <div className="project-header">
+        <h1>{projectData.title}</h1>
         <h3>Influcencer: <ProjectOwner owner={projectData.owner}/></h3>
       </div>
 
-      <div className="hero--sidebar">
-        <img className="hero--image" src={projectData.image} />
+      <div className="project-details">
+        <img src={projectData.image} />
+        <div className="project-details-text">
           <h3>Project Details</h3>
           <p class="project-description">{projectData.description}</p>
           <ul>
@@ -56,52 +57,45 @@ function ProjectDetailTemplate() {
             <li>Project Ending:  {new Date(projectData.date_ending).toLocaleString('en-AU',{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
             <li>{`Status: ${projectData.is_open}`}</li>
           </ul>
-          <h4>Goal: {projectData.goal}</h4>
-          <div className="pledges-total">
-            <h3>Total Raised: ${projectPledgeAmount} Inventi-Cents!</h3>
-            
-            <PledgeProgress completed={projectGoalPercentage} bgcolor={"#6a1b9a"} />
-            
-            <h3>{projectData.is_open
-            // '? :' are ternary oprators
-                // '?' is if true
-                // ':' is if false
-                // what comes before the ? is the predicate aka 'what you write in the if statement'
-                ? projectData.goal > projectPledgeAmount
-                    ? "Currently Accepting Pledges"
-                    : "We made a lot of money, please give more though 👀"
-                : "Invention has been built."}</h3>
+        </div>
+      </div>
+
+      <div className="pledges-total">
+        <div className="pledges-figures">
+          <h4>Goal: ${projectData.goal}</h4>
+          <h4>Total Raised: ${projectPledgeAmount}</h4>
+        </div>
+          <PledgeProgress completed={projectGoalPercentage} bgcolor={"#49c181"} /> 
         </div>
 
-      </div>
+      <div className="project-pledges-comments">
+        <div className="project-pledges">
+          <h3>Pledges</h3>
+          <ul>
+            {projectData.pledges.map((pledgeData, key) => {
+              return (
+                <li>
+                  <PledgeSupporter amount={pledgeData.amount} supporter={pledgeData.supporter} comment={pledgeData.comment} />
+                </li>
+              );
+            })}
+          </ul>
+          <a class="button" href="/">Pledge to this project</a>
+        </div>
 
-
-      <div className="grid--container">
-        <h3>Pledges</h3>
-        <ul>
-          {projectData.pledges.map((pledgeData, key) => {
-            return (
-              <li>
-                <PledgeSupporter amount={pledgeData.amount} supporter={pledgeData.supporter} comment={pledgeData.comment} />
-              </li>
-            );
-          })}
-        </ul>
-        <a class="button" href="/">Pledge to this project</a>
-      </div>
-
-      <div className="grid--container">
-        <h3>Comments</h3>
-        <ul>
-          {projectData.comments.map((commentData, key) => {
-            return (
-              <li>
-                {commentData.body} by {commentData.author}
-              </li>
-            );
-          })}
-        </ul>
-        <a class="button" href="/">Comment on this project</a>
+        <div className="project-comments">
+          <h3>Comments</h3>
+          <ul>
+            {projectData.comments.map((commentData, key) => {
+              return (
+                <li>
+                  {commentData.body} by {commentData.author}
+                </li>
+              );
+            })}
+          </ul>
+          <a class="button" href="/">Comment on this project</a>
+        </div>
       </div>
 
     </main>

@@ -24,7 +24,7 @@ function ProfilePage() {
   // Normal State
   return (
     <main>
-      <div class="user-detail">
+      <div className="user-detail">
         <h3>{userData.username}</h3>
         <img src={userData.profile_image} />
           <h3>User Details</h3>
@@ -35,11 +35,11 @@ function ProfilePage() {
       </div>
 
 
-      <div class="user-badges">
+      <div className="user-badges">
         <h3>Badges</h3>
       </div>
 
-      <div class="user-projects">
+      <div className="user-projects">
         <h3>List of projects or pledges...</h3>
       </div>
 

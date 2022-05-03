@@ -1,8 +1,12 @@
 .register-cta{
-    background-color: aliceblue;
+    background-color: #49c181;
     padding: 100px 0px;
     text-align: center;
   }
+
+.register-cta h2{
+  color: #fff;
+}
   
   .register-cta a{
     margin-top: 30px;

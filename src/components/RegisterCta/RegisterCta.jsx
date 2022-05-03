@@ -3,9 +3,9 @@ import "./RegisterCta.css";
 
 function RegisterCta() {
     return (
-        <div class="register-cta">
+        <div className="register-cta">
             <h2>Ready to support your influencer?</h2>
-            <a href="/project" class="button" >Get Started!</a>
+            <a href="/project" className="button" >Get Started!</a>
         </div>
     );
 }

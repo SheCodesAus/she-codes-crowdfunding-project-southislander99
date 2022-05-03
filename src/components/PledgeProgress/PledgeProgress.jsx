@@ -3,7 +3,7 @@ const PledgeProgress = (props) => {
   
     const containerStyles = {
       height: 20,
-      width: '100%',
+      width: '50%',
       backgroundColor: "#e0e0de",
       borderRadius: 50,
       margin: 50

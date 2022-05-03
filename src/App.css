@@ -14,7 +14,7 @@ nav a {
 } */
 
 h1 {
-  color: rgb(255, 66, 77);
+  color: #49c181;
   font-family: Walsheim, sans-serif;
   font-weight: 700;
   font-size: 3.5rem;
@@ -42,7 +42,7 @@ h2 {
 
 .button {
   text-decoration: none;
-  background-color: rgb(255, 66, 77);
+  background-color: #DDAE1B;
   border-radius: 9999px;
   display: inline-flex;
   font-weight: 500;
@@ -57,7 +57,7 @@ h2 {
 }
 
 #hero-banner-text{
-  margin: 50px 15px 0px 15px;
+  margin: 70px 15px 0px 15px;
   align-items: center;
 }
 
@@ -112,47 +112,41 @@ section {
   /* background-color: #F6F8DE; */
 }
 
-.grid--container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-}
-
-.hero--title {
-  font-size: 40px;
+.project-header{
+  margin: 50px 0px;
   text-align: center;
 }
 
-.hero--image {
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px gray;
+.project-details{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  justify-content: center;
 }
 
-.hero--sidebar {
-  height: 400px;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px gray;
-}
-
-.hero--sidebar {
-  padding-left: 30px;
+.project-details img{
   padding-right: 30px;
 }
 
-.hero--sidebar button {
-  background-color:#02a95c;
-  font-size: 15px;
-  font-weight: bold;
-  border: 1px solid;
-  border-radius: 5px;
-  text-align: center;
-  padding: 10px;
-  color:white;
+.pledges-total{
+  display:flex;
+  justify-content: center;
+  margin: auto;
 }
+
+.pledges-figures{
+  
+}
+
+.project-pledges{
+  padding-right: 30px;
+}
+
+.project-pledges-comments{
+  margin: 50px auto;
+  display:flex;
+  justify-content: center;
+}
+
 
 
