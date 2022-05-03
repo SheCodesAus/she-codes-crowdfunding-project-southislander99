@@ -9,6 +9,7 @@ import ProjectListingPage from "./pages/ProjectListingPage";
 import LoginPage from "./pages/LoginPage";
 import PledgePage from "./pages/PledgePage";
 import ProfilePage from "./pages/ProfilePage";
+import CreateProjectPage from "./pages/CreateProjectPage";
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
 
         <Routes>
           <Route path="/users/:id" element={<ProfilePage />} />
-          {/* <Route path="/pledge" element={<PledgePage />} /> */}
           <Route path="/pledges/:id" element={<PledgePage />} />
           <Route path="/project" element={<ProjectListingPage />} />
+          <Route path="/create-project" element={<CreateProjectPage />} />
           <Route path="/project/:id" element={<ProjectDetailTemplate />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />

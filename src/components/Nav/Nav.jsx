@@ -18,7 +18,7 @@ const Navbar = () => {
             <NavMenu>
                 <NavLink to="/" activestyle={{ color: 'black' }}>Home</NavLink>
                 <NavLink to="/project" activestyle={{ color: 'black' }}>Projects</NavLink>
-                <NavLink to="/pledge" activestyle={{ color: 'black' }}>Make a Pledge</NavLink>
+                <NavLink to="/create-project" activestyle={{ color: 'black' }}>Create a Project</NavLink>
                 <NavLink to="/users" activestyle={{ color: 'black' }}>My Profile</NavLink>
                 <NavLink to="/login" activestyle={{ color: 'black' }}>Login</NavLink>
                 <NavBtn>

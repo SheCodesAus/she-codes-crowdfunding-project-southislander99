@@ -17,8 +17,8 @@ function ProjectForm(projectData) {
   // Actions and Helpers
   const handleChange = (event) => {
     const { id, value } = event.target;
-    postPledge((PledgeData) => ({
-      ...PledgeData,
+    postProject((ProjectData) => ({
+      ...ProjectData,
       [id]: value,
     }));
   };
@@ -27,13 +27,13 @@ function ProjectForm(projectData) {
     event.preventDefault();
 
     const token = window.localStorage.getItem("token")
-    console.log("handleSubmit", pledge, token)
+    console.log("handleSubmit", project, token)
     
     // Is user logged in and have they put something in all fields?
-    if (token && pledge.amount && pledge.comment) {
+    if (token && project.title && project.goal) {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}pledges/`,
+          `${process.env.REACT_APP_API_URL}projects/`,
           {
             method: "post",
             headers: {
@@ -41,13 +41,18 @@ function ProjectForm(projectData) {
               'Authorization': `Token ${token}`,
             },
             body: JSON.stringify({
-              amount: parseInt(pledge.amount), 
-              comment: pledge.comment, 
-              anonymous: true, 
-              project_id: parseInt(id)
+              title: project.title, 
+              description: project.description, 
+              goal: parseInt(project.goal), 
+              image: project.image,
+              is_open: true,
+              date_start: project.date_start,
+              date_ending: project.date_ending,
+              category: project.category,
             }),
           }
         );
+    
         const data = await response.json();
         console.log(data)
         navigate(`/project/${id}`);
@@ -59,7 +64,7 @@ function ProjectForm(projectData) {
 
     if (!token) {
       return (
-        <Link to="/login">Please login to pledge to this amazing project</Link>
+        <Link to="/login">Please login to create a project</Link>
       );
     }
 
@@ -85,7 +90,7 @@ function ProjectForm(projectData) {
             />
           </div>
           <button type="submit" onClick={handleSubmit}>
-            Post Pledge
+            Create Project
           </button>
         </form>
       );
