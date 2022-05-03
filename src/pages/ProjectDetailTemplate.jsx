@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ProjectOwner from "../components/ProjectOwner/ProjectOwner";
 import PledgeSupporter from "../components/PledgeSupporter/PledgeSupporter";
 import PledgeProgress from "../components/PledgeProgress/PledgeProgress";
 import RegisterCta from "../components/RegisterCta/RegisterCta";
+import PledgeForm from "../components/PledgeForm/PledgeForm";
 
 function ProjectDetailTemplate() {
   // State
@@ -98,6 +99,7 @@ function ProjectDetailTemplate() {
           <a class="button" href="/">Comment on this project</a>
         </div>
       </div>
+      <PledgeForm />
       <RegisterCta />
 
     </main>

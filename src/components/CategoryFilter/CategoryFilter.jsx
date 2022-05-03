@@ -9,7 +9,8 @@ import "./CategoryFilter.css";
 //     { label: 'Active', value: 'Active'},
 // ];
 
-function CategoryFilter() {
+function CategoryFilter(props) {
+    const {setFilterCategories} = props;
 
     const [categoryData, setCategoryData] = useState([]);
     
@@ -20,17 +21,27 @@ function CategoryFilter() {
             return results.json();
         })
         .then((data) => {
-            setCategoryData(data);
+
+            const selectOptions = data.results.map((category) => {
+                return{
+                    value: category.slug,
+                    label: category.category_name
+                }
+            })
+            console.log("data", data.results, selectOptions)
+
+            setCategoryData(selectOptions);
         });
     }, []);
+
 
     return (
         <div className="category-filter">
             <label class="filter-label">Project Category</label>
             <Select
-                options={categoryData.id}
-                isMulti
-                onChange={opt => console.log(opt)}
+                options={categoryData}
+                // isMulti
+                onChange={option => setFilterCategories(option.value)}
                 placeholder="Select a category"
             />
         </div>
@@ -40,3 +51,6 @@ function CategoryFilter() {
 
 
 export default CategoryFilter;
+
+
+

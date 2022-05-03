@@ -19,7 +19,8 @@ function App() {
 
         <Routes>
           <Route path="/users/:id" element={<ProfilePage />} />
-          <Route path="/pledge" element={<PledgePage />} />
+          {/* <Route path="/pledge" element={<PledgePage />} /> */}
+          <Route path="/pledges/:id" element={<PledgePage />} />
           <Route path="/project" element={<ProjectListingPage />} />
           <Route path="/project/:id" element={<ProjectDetailTemplate />} />
           <Route path="/login" element={<LoginPage />} />

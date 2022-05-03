@@ -3,11 +3,11 @@ import React, { useState } from "react";
 // Imports
 import { useNavigate,useParams,Link } from "react-router-dom";
 
-function PledgeForm(pledgeData) {
+function ProjectForm(projectData) {
   // State
   const token = window.localStorage.getItem("token")
-  const [pledge, postPledge] = useState(
-    pledgeData.map
+  const [project, postProject] = useState(
+    projectData.map
   );
 
   // // Hooks
@@ -91,4 +91,4 @@ function PledgeForm(pledgeData) {
       );
 }
 
-export default PledgeForm;
+export default ProjectForm;
