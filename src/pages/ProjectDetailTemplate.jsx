@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ProjectOwner from "../components/ProjectOwner/ProjectOwner";
 import PledgeSupporter from "../components/PledgeSupporter/PledgeSupporter";
 import PledgeProgress from "../components/PledgeProgress/PledgeProgress";
+import RegisterCta from "../components/RegisterCta/RegisterCta";
 
 function ProjectDetailTemplate() {
   // State
@@ -65,7 +66,7 @@ function ProjectDetailTemplate() {
           <h4>Goal: ${projectData.goal}</h4>
           <h4>Total Raised: ${projectPledgeAmount}</h4>
         </div>
-          <PledgeProgress completed={projectGoalPercentage} bgcolor={"#49c181"} /> 
+          <PledgeProgress completed={projectGoalPercentage} bgcolor={"#FCA571"} /> 
         </div>
 
       <div className="project-pledges-comments">
@@ -97,6 +98,7 @@ function ProjectDetailTemplate() {
           <a class="button" href="/">Comment on this project</a>
         </div>
       </div>
+      <RegisterCta />
 
     </main>
   );

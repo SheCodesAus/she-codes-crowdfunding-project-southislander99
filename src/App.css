@@ -14,7 +14,7 @@ nav a {
 } */
 
 h1 {
-  color: #49c181;
+  color: #F45CAB;
   font-family: Walsheim, sans-serif;
   font-weight: 700;
   font-size: 3.5rem;
@@ -42,7 +42,7 @@ h2 {
 
 .button {
   text-decoration: none;
-  background-color: #DDAE1B;
+  background-color: #FCA571;
   border-radius: 9999px;
   display: inline-flex;
   font-weight: 500;
@@ -110,6 +110,10 @@ h2 {
 section {
   padding: 50px;
   /* background-color: #F6F8DE; */
+}
+
+.section-header{
+  text-align: center;
 }
 
 .project-header{
