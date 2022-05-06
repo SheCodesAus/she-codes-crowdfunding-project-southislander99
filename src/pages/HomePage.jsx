@@ -31,7 +31,7 @@ function HomePage() {
                 <h2>Latest Fad Projects!</h2>
             </div>
             <div id="project-list">
-                {projectList.map((projectData, key) => {
+                {projectList.slice(0,3).map((projectData, key) => {
                     return <ProjectCard key={key} projectData={projectData} />;
                 } )}
             </div>
