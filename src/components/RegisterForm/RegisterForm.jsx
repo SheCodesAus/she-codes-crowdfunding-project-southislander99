@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function RegistrationForm() {
+function RegisterForm() {
   // State
   const [register, setRegister] = useState({
     "username": "",
@@ -103,4 +103,4 @@ function RegistrationForm() {
     )
 }
 
-export default RegistrationForm;
+export default RegisterForm;

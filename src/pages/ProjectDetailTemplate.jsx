@@ -47,13 +47,15 @@ function ProjectDetailTemplate() {
       <div className="project-header">
         <h1>{projectData.title}</h1>
         <h3>Influcencer: <ProjectOwner owner={projectData.owner}/></h3>
+        <Link to={`/edit-project/${id}`} className="button">Edit this project</Link>
+        <a className="button" href="/">Delete this project</a>
       </div>
 
       <div className="project-details">
         <img src={projectData.image} />
         <div className="project-details-text">
           <h3>Project Details</h3>
-          <p class="project-description">{projectData.description}</p>
+          <p className="project-description">{projectData.description}</p>
           <ul>
             <li>Project Starting: {new Date(projectData.date_start).toLocaleString('en-AU',{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
             <li>Project Ending:  {new Date(projectData.date_ending).toLocaleString('en-AU',{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
@@ -82,7 +84,7 @@ function ProjectDetailTemplate() {
               );
             })}
           </ul>
-          <a class="button" href="/">Pledge to this project</a>
+          <a className="button" href="/">Pledge to this project</a>
         </div>
 
         <div className="project-comments">
@@ -96,7 +98,7 @@ function ProjectDetailTemplate() {
               );
             })}
           </ul>
-          <a class="button" href="/">Comment on this project</a>
+          <a className="button" href="/">Comment on this project</a>
         </div>
       </div>
       <PledgeForm />

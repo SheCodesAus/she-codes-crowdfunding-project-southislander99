@@ -36,7 +36,7 @@ function HomePage() {
                 } )}
             </div>
             <div className="view-more-cta">
-                <a href="/project" class="button" >View more awesome influencer lead projects!</a>
+                <a href="/project" className="button" >View more awesome influencer lead projects!</a>
             </div>
             <div className="section-intro">
                 <h2>What Is 'Like and Fund Me'?</h2>

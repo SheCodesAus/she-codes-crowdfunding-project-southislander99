@@ -37,7 +37,7 @@ function CategoryFilter(props) {
 
     return (
         <div className="category-filter">
-            <label class="filter-label">Project Category</label>
+            <label className="filter-label">Project Category</label>
             <Select
                 options={categoryData}
                 // isMulti

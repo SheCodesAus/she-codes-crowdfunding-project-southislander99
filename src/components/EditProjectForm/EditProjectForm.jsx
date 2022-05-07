@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate,useParams,Link } from "react-router-dom";
 
-function ProjectForm(projectData) {
+function EditProjectForm({projectData}) {
   // State
+
   const token = window.localStorage.getItem("token")
   const [project, postProject] = useState(
     projectData.map
@@ -40,13 +41,13 @@ function ProjectForm(projectData) {
       },
       {
         id: "date_start",
-        label: "Project start date",
+        label: "Image",
         placeholder: "Set start date of project",
         type: "date",
       },
       {
         id: "date_ending",
-        label: "Project end date",
+        label: "Image",
         placeholder: "Set end date of project",
         type: "date",
       },
@@ -79,12 +80,12 @@ function ProjectForm(projectData) {
     console.log("handleSubmit", project, token)
     
     // Is user logged in and have they put something in all fields?
-    if (token && project.title && project.goal) {
+    // if (token && project.title && project.goal) {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}projects/`,
+          `${process.env.REACT_APP_API_URL}projects/${id}/`,
           {
-            method: "post",
+            method: "put",
             headers: {
               "Content-Type": "application/json",
               'Authorization': `Token ${token}`,
@@ -108,12 +109,11 @@ function ProjectForm(projectData) {
       } catch (err) {
         console.log(err);
       }
-    }
-  };
+    };
 
     if (!token) {
       return (
-        <Link to="/login">Please login to create a project</Link>
+        <Link to="/login">Please login to edit a project</Link>
       );
     }
 
@@ -132,12 +132,13 @@ function ProjectForm(projectData) {
                             id={field.id}
                             placeholder={field.placeholder}
                             onChange={handleChange}
+                            value={projectData?.[field.id]}
                         />
                     </div>
                 );
             })}
             <button type="submit" onClick={handleSubmit}>
-                Create a Project
+                Edit your Project
             </button>
         </form>
 
@@ -147,4 +148,4 @@ function ProjectForm(projectData) {
 
 }
 
-export default ProjectForm;
+export default EditProjectForm;

@@ -20,6 +20,10 @@ function ProfilePage() {
       });
   }, [id]);
 
+  // Loading State
+  if (!userData) {
+    return <h3>Loading user profile....</h3>;
+  }
 
   // Normal State
   return (

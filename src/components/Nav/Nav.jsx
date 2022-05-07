@@ -13,19 +13,18 @@ const Navbar = () => {
     return(
         <Nav>
             <NavLogo to="/">Logo</NavLogo>
-            <Bars />
-        
+            <Bars />      
             <NavMenu>
                 <NavLink to="/" activestyle={{ color: 'black' }}>Home</NavLink>
                 <NavLink to="/project" activestyle={{ color: 'black' }}>Projects</NavLink>
                 <NavLink to="/create-project" activestyle={{ color: 'black' }}>Create a Project</NavLink>
                 <NavLink to="/users" activestyle={{ color: 'black' }}>My Profile</NavLink>
-                <NavLink to="/login" activestyle={{ color: 'black' }}>Login</NavLink>
+                <NavLink to="/login" activestyle={{ color: 'black' }} >Logout</NavLink>
                 <NavBtn>
-                    <NavBtnLink to="/">Sign Up</NavBtnLink>
+                    <NavBtnLink to="/register">Sign Up</NavBtnLink>
                 </NavBtn>
             </NavMenu>
-        </Nav>
+         </Nav>
     );
 }
 

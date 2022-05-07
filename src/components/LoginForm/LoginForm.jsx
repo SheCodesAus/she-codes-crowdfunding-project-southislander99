@@ -5,10 +5,11 @@ import "./LoginForm.css";
 function LoginForm() {
 
 //state
-    const [credentials, setCredentials] = useState({
-        username: "", 
-        password: "",
+const [credentials, setCredentials] = useState({
+    username: "", 
+    password: "",
 })
+
 
 //hooks
 const navigate = useNavigate();
@@ -39,7 +40,7 @@ const handleSubmit = async (event) => {
         );
         const data = await response.json();
         console.log(data)
-        window.localStorage.setItem("token", data.token);    
+        window.localStorage.setItem("token", data.token);  
         navigate("/")  
         } catch (err) {
         console.log(err);
@@ -48,10 +49,10 @@ const handleSubmit = async (event) => {
   };
 
   return (
-    <div class="login-form">
+    <div className="login-form">
       <h1>Login</h1>
       <form>
-        <div class="input-field">
+        <div className="input-field">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -60,7 +61,7 @@ const handleSubmit = async (event) => {
             onChange={handleChange}
           />
         </div>
-        <div class="input-field">
+        <div className="input-field">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -69,7 +70,7 @@ const handleSubmit = async (event) => {
             onChange={handleChange}
           />
         </div>
-        <button class="button" type="submit" onClick={handleSubmit}>
+        <button className="button" type="submit" onClick={handleSubmit}>
           Login
         </button>
       </form>
