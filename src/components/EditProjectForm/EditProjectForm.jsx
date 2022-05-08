@@ -79,8 +79,6 @@ function EditProjectForm({projectData}) {
     const token = window.localStorage.getItem("token")
     console.log("handleSubmit", project, token)
     
-    // Is user logged in and have they put something in all fields?
-    // if (token && project.title && project.goal) {
       try {
         const response = await fetch(
           `${process.env.REACT_APP_API_URL}projects/${id}/`,
@@ -132,7 +130,7 @@ function EditProjectForm({projectData}) {
                             id={field.id}
                             placeholder={field.placeholder}
                             onChange={handleChange}
-                            value={projectData?.[field.id]}
+                            defaultValue={projectData?.[field.id]}
                         />
                     </div>
                 );
